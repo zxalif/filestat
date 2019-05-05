@@ -1,2 +1,2 @@
 # filestat
-Monitoring Files in Python
+A command line library to monitor files.
