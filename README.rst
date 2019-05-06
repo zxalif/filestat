@@ -37,7 +37,7 @@ There is two way to access filestat_ with command line or with python ``interpre
 .. code-block:: bash
 
     $ filestat -f filename.py
-    Name:	filestat
+    Name:	filename.py
     Owner:	alif
     Group:	alif
     Size:	1045 bytes
