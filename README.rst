@@ -36,7 +36,7 @@ There is two way to access filestat_ with command line or with python ``interpre
 
 .. code-block:: bash
 
-    $ filestat -f filename.py
+    $ python3 -m filestat -f filename.py
     Name:	filename.py
     Owner:	alif
     Group:	alif
