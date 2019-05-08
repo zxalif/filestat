@@ -4,6 +4,21 @@ import os as _os
 from datetime import datetime as _datetime
 import pwd as _pwd
 import grp as _grp
+import getpass as _getpass
+
+
+def get_user_name() -> str:
+    """Return current user name"""
+    return _getpass.getuser()
+
+
+def get_group_name(user: str=None) -> str:
+    """Retun current group name for current user"""
+    if user is None:
+        user = get_user_name()
+
+    group_id = _pwd.getpwnam(user).pw_gid
+    return _grp.getgrgid(group_id).gr_name
 
 
 def get_size(name: str) -> int:
@@ -17,8 +32,8 @@ def get_size(name: str) -> int:
     return stats.st_size
 
 
-def get_permissions(name: str) -> oct:
-    """A function that return file permission in octal"""
+def get_permissions(name: str) -> int:
+    """A function that return file permission in octal as int."""
     try:
         stats = _os.stat(name)
     except FileNotFoundError:
@@ -26,7 +41,7 @@ def get_permissions(name: str) -> oct:
     except Exception:
         raise
 
-    return oct(stats.st_mode)[-3:]  # return the last three digits
+    return int(oct(stats.st_mode)[-3:])  # return the last three digits
 
 
 def get_last_access_time(name: str) -> str:

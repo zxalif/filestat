@@ -28,7 +28,7 @@ To install using ``git`` just clone the repo
     $ python3 setup.py install
 
 Usages
-************************************************************
+***********************************************************
 
 There is two way to access filestat_ with command line or with python ``interpreter``.
 
