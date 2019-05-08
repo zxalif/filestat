@@ -17,7 +17,7 @@ def readme():
 setup(name='filestat',
       version='0.2.2',
       classifiers=[
-                'Development Status :: 0.2.0 - Beta',
+                'Development Status :: 4 - Beta',
                 'Environment :: Console',
                 'Intended Audience :: End Users/Desktop',
                 'Intended Audience :: Developers',
