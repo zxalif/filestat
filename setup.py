@@ -1,5 +1,13 @@
 from setuptools import setup
+import sys
 
+
+CURRENT_PYTHON = sys.version_info[:2]
+REQUIRED_PYTHON = (3, 5)
+
+# This check and everything above must remain compatible with Python 2.7.
+if CURRENT_PYTHON < REQUIRED_PYTHON:
+    raise SystemExit("Use Python 3 (or higher) only")
 
 def readme():
     with open('README.rst', 'r') as w:
@@ -7,8 +15,25 @@ def readme():
 
 
 setup(name='filestat',
-      version='0.2.1',
-      description='A command line library for file monitoring',
+      version='0.2.2',
+      classifiers=[
+                'Development Status :: 0.2.0 - Beta',
+                'Environment :: Console',
+                'Intended Audience :: End Users/Desktop',
+                'Intended Audience :: Developers',
+                'Intended Audience :: System Administrators',
+                'License :: OSI Approved :: Python Software Foundation License',
+                'Operating System :: MacOS :: MacOS X',
+                'Operating System :: POSIX',
+                'Programming Language :: Python :: 3.5',
+                'Programming Language :: Python :: 3.6',
+                'Programming Language :: Python :: 3.7',
+                'Programming Language :: Python :: 3.8',
+                'Programming Language :: Python :: 3 :: Only',
+                'Topic :: Office/Business',
+                'Topic :: Software Development :: Bug Tracking',
+                ],
+      description='A command line library for file monitoring.',
       long_description=readme(),
       url='https://github.com/zxalif/filestat/',
       author='Alif Jahan',

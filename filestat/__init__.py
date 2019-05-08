@@ -2,5 +2,5 @@
 
 from . import utils
 
-__version__ = "v0.2.1"
-version = "v0.2.1"
+__version__ = "v0.2.2"
+version = "v0.2.2"
