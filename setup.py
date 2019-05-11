@@ -15,14 +15,14 @@ def readme():
 
 
 setup(name='filestat',
-      version='0.2.2',
+      version='0.2.3',
       classifiers=[
                 'Development Status :: 4 - Beta',
                 'Environment :: Console',
                 'Intended Audience :: End Users/Desktop',
                 'Intended Audience :: Developers',
+                'Intended Audience :: Education',
                 'Intended Audience :: System Administrators',
-                'License :: OSI Approved :: Python Software Foundation License',
                 'Operating System :: MacOS :: MacOS X',
                 'Operating System :: POSIX',
                 'Programming Language :: Python :: 3.5',

@@ -100,6 +100,8 @@ def check_owner(owner: str, fp_name: str) -> bool:
     try:
         if get_owner_info(fp_name) == owner:
             confirm = True
+    except FileNotFoundError:
+        raise FileNotFoundError(f'{fp_name} this file does not exists, make sure you input correct file name.')
     except Exception:
         raise
 
@@ -113,6 +115,54 @@ def check_group(owner: str, fp_name: str) -> bool:
     try:
         if get_group_info(fp_name) == owner:
             confirm = True
+    except FileNotFoundError:
+        raise FileNotFoundError(f'{fp_name} this file does not exists, make sure you input correct file name.')
+    except Exception:
+        raise
+
+    return confirm
+
+
+def readable(fp_name: str) -> bool:
+    confirm = False
+
+    try:
+        if _os.access(fp_name, _os.R_OK):
+            confirm = True
+    except FileNotFoundError:
+        raise FileNotFoundError(f'{fp_name} this file does not exists, make sure you input correct file name.')
+    except Exception:
+        raise
+
+    return confirm
+
+
+def writable(fp_name: str) -> bool:
+    """Function return boolean about the file writable or not!"""
+
+    confirm = False
+
+    try:
+        if _os.access(fp_name, _os.W_OK):
+            confirm = True
+    except FileNotFoundError:
+        raise FileNotFoundError(f'{fp_name} this file does not exists, make sure you input correct file name.')
+    except Exception:
+        raise
+
+    return confirm
+
+
+def executable(fp_name: str) -> bool:
+    """Function return boolean about the file executable or not!"""
+
+    confirm = False
+
+    try:
+        if _os.access(fp_name, _os.X_OK):
+            confirm = True
+    except FileNotFoundError:
+        raise FileNotFoundError(f'{fp_name} this file does not exists, make sure you input correct file name.')
     except Exception:
         raise
 

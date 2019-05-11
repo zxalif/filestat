@@ -24,10 +24,15 @@ def main():
             update_time = utils.creation_time(file)
             last_access = utils.get_last_access_time(file)
             permissions = utils.get_permissions(file)
+            readable = utils.readable(file)
+            writable = utils.writable(file)
+            executable = utils.executable(file)
 
-            string = f'Name:\t{file}\nOwner:\t{name_of_owner}\nGroup:\t{name_of_group}\n' \
+            string = f'Location/Name:\t{file}\nOwner:\t{name_of_owner}\nGroup:\t{name_of_group}\n' \
                 f'Size:\t{size_of_file} bytes\nUpdate Time: \t{update_time}\n' \
-                f'Last Access:\t{last_access}\nPermissions:\t{permissions}\n'
+                f'Last Access:\t{last_access}\nPermissions:\t{permissions}\n' \
+                f'Readable: \t{readable}\nWritable: \t{writable}\n' \
+                f'Executable: \t{executable}'
 
             print(string)
 
