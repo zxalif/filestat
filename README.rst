@@ -44,6 +44,10 @@ There is two way to access filestat_ with command line or with python ``interpre
     Update Time: 	Sunday, May 05, 2019 10:50:11.640795 PM
     Last Access:	Sunday, May 05, 2019 10:50:15.200863 PM
     Permissions:	644
+    Readable: 	True
+    Writable: 	True
+    Executable: 	False
+
 
 2. Using ``interpreter``
 
