@@ -12,7 +12,7 @@ def get_user_name() -> str:
     return _getpass.getuser()
 
 
-def get_group_name(user: str=None) -> str:
+def get_group_name(user: str = None) -> str:
     """Retun current group name for current user"""
     if user is None:
         user = get_user_name()
