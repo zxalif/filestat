@@ -19,13 +19,13 @@ Using ``pip``
 
     $ pip install filestat
 
-To install using ``git`` just clone the repo
+To install filestat using ``git`` just clone the repo
 
 .. code-block:: bash
 
     $ git clone https://github.com/zxalif/filestat.git
     $ cd filestat
-    $ python3 setup.py install
+    $ pip install -e .
 
 Usages
 ***********************************************************
@@ -63,5 +63,3 @@ License
 --------------------------------------------------------
 
 The program under Licensed MIT_.
-
-**Documentations are under develop**

@@ -7,7 +7,7 @@ REQUIRED_PYTHON = (3, 5)
 
 
 if CURRENT_PYTHON <= REQUIRED_PYTHON:
-    raise SystemExit("Use Python 3 (or higher) only")
+    raise SystemExit("Use Python 3.5 (or higher) only")
 
 def readme():
     with open('README.rst', 'r') as w:
@@ -23,6 +23,7 @@ setup(name='filestat',
                 'Intended Audience :: Developers',
                 'Intended Audience :: Education',
                 'Intended Audience :: System Administrators',
+                'Topic :: Software Development :: Libraries :: Python Modules',
                 'Operating System :: MacOS :: MacOS X',
                 'Operating System :: POSIX',
                 'Programming Language :: Python :: 3.5',

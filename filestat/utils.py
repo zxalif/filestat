@@ -18,7 +18,7 @@ def get_user_name() -> str:
 
 
 def get_group_name(user: str = None) -> str:
-    """Retun current group name of current user.
+    """Return group name of current or given user name.
 
 
     Keyword arguments:
