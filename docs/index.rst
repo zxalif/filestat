@@ -124,3 +124,81 @@ By default the ``user`` parameter is ``None``. If no argument pass through the f
 ==============
 `File`_
 ==============
+
+``get_permissions(name)`` function returns permission in octal as int. It takes file name as parameter.
+
+.. code-block:: python
+
+    >>> from filestat import utils
+    >>> utils.get_permissions('file_name.py')
+    755
+    >>>
+
+If the file doesn't exists the function return ``FileNotFoundError``.
+
+``get_last_access_time(name)`` function returns last access date time of a give file name.
+
+.. code-block:: python
+
+    >>> from filestat import utils
+    >>> utils.get_last_access_time('file_name.py')
+    'Thursday, May 09, 2019 11:03:35.743453 PM'
+    >>>
+
+``creation_time(name)`` function return modification date time of a file or created date time.
+
+.. code-block:: python
+
+    >>> from filestat import utils
+    >>> utils.creation_time('file_name.py')
+    'Thursday, May 08, 2019 01:33:43.712453 PM'
+    >>>
+
+``get_owner_info(name)`` return the owner name of given file name.
+
+.. code-block:: python
+
+    >>> from filestat import utils
+    >>> utils.get_owner_info('file_name.py')
+    'alif'
+    >>>
+
+``get_group_info(name)`` function return group name that belongs to the file.
+
+.. code-block:: python
+
+    >>> from filestat import utils
+    >>> utils.get_group_info('file_name.py')
+    'alif'
+    >>>
+
+``check_owner(owner, fp_name)`` that check a owner is belongs to file or not. That requires two parameter ``owner`` name and ``fp_name`` the file name.
+
+.. code-block:: python
+
+    >>> from filestat import utils
+    >>> utils.check_owner('alif','file_name.py')
+    True
+    >>>
+
+``check_group(owner, fp_name)`` that check a group is belongs to file or not. That requires two parameter ``owner`` name and ``fp_name`` the file name.
+
+.. code-block:: python
+
+    >>> from filestat import utils
+    >>> utils.check_group('alif','file_name.py')
+    True
+    >>>
+
+``readable(fp_name)``, ``writable(fp_name)`` and ``executable(fp_name)`` return True/False if a file able read, write or executable by the current user.
+
+.. code-block:: python
+
+    >>> from filestat import utils
+    >>> utils.readable('file_name.py')
+    True
+    >>> utils.writable('file_name.py')
+    True
+    >>> utils.executable('file_name.py')
+    False
+    >>>
