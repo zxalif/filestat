@@ -190,7 +190,7 @@ If the file doesn't exists the function return ``FileNotFoundError``.
     True
     >>>
 
-``readable(fp_name)``, ``writable(fp_name)`` and ``executable(fp_name)`` return True/False if a file able read, write or executable by the current user.
+``readable(fp_name)``, ``writable(fp_name)`` and ``executable(fp_name)`` return ``True/False`` if a file able read, write or executable by the current user.
 
 .. code-block:: python
 
